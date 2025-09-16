@@ -3,7 +3,7 @@ This project is a browser version of the game _Hangman_.
 
 The game adopts the Model-View-Controller (MVC) design pattern for the code's architecture.
 
-[Try it out.](https://grglls.github.io/hangman/)
+[Try it out.](https://gregells.github.io/hangman/)
 
 ## Screenshots:
 | ![New game](assets/screenshots/1_start.png)  | ![Mid-game](assets/screenshots/2_playing.png) | ![Lost game](assets/screenshots/3_lose.png) | ![Won game](assets/screenshots/4_win.png) |
