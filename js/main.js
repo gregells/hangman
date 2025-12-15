@@ -10,6 +10,11 @@ for (let i = 0; i < ALL_WORDS.commonWords.length; i++) {
   };
 };
 
+// Sound files:
+const SOUNDS = {
+  correct: 'https://cdn.freesound.org/previews/679/679016_14249477-lq.mp3',
+};
+
 /*------------------------- state variables -------------------------*/
 const state = {
   randomWord: null,
@@ -29,6 +34,7 @@ const elements = {
   keyboardContainer: document.getElementById('keyboard-container'),
   playAgainButton: document.getElementById('play-again'),
 };
+const player = new Audio(); // The audio player
 
 /*------------------------- event listeners -------------------------*/
 elements.playAgainButton.addEventListener('click', init);
@@ -226,10 +232,11 @@ function animateKeypress(letterEl) {
 }
 
 function animateRevealLetter(letterEl) {
+  playSound('correct');
   letterEl.classList.add('animate-ping');
   setTimeout(() => {
     letterEl.classList.remove('animate-ping');
-  }, 300)
+  }, 300);
 }
 
 function animateWinGame(wordEl) {
@@ -267,4 +274,9 @@ function animateLoseGame(wordEl) {
       }, 1500);
     }
   }
+}
+
+function playSound(name) {
+  player.src = SOUNDS[name];
+  player.play();
 }
