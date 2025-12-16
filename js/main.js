@@ -14,6 +14,7 @@ for (let i = 0; i < ALL_WORDS.commonWords.length; i++) {
 const SOUNDS = {
   correct: 'https://cdn.freesound.org/previews/679/679016_14249477-lq.mp3',
   incorrect: 'https://cdn.freesound.org/previews/572/572938_10182789-lq.mp3',
+  win: 'https://cdn.freesound.org/previews/352/352669_4019029-lq.mp3',
 };
 
 /*------------------------- state variables -------------------------*/
@@ -243,6 +244,8 @@ function animateRevealLetter(letterEl) {
 }
 
 function animateWinGame(wordEl) {
+  // Play the win sound:
+  playSound('win');
   // Pop-up the letters one-by-one in sequence:
   for (let i = 0; i < wordEl.children.length; i++) {
     setTimeout(() => {
