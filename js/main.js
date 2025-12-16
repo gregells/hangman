@@ -13,6 +13,7 @@ for (let i = 0; i < ALL_WORDS.commonWords.length; i++) {
 // Sound files:
 const SOUNDS = {
   correct: 'https://cdn.freesound.org/previews/679/679016_14249477-lq.mp3',
+  incorrect: 'https://cdn.freesound.org/previews/572/572938_10182789-lq.mp3',
 };
 
 /*------------------------- state variables -------------------------*/
@@ -113,6 +114,8 @@ function checkLetter(letter) {
   } else {
     // If the letter is NOT part of the word, increment the number of incorrect guesses:
     state.incorrectGuesses += 1;
+    // Play the sound for incorrect guess:
+    playSound('incorrect');
   };
 
   // Check for winner:
