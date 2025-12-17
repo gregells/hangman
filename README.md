@@ -34,3 +34,10 @@ No known bugs at this time.
 Word list sourced from [here](https://github.com/dariusk/corpora/blob/master/data/words/common.json).
 
 SVG files created using https://picsvg.com/.
+
+Sounds taken from:
+- Correct guess: https://freesound.org/people/LeonelAle71/sounds/679016/
+- Incorrect guess: https://freesound.org/people/BloodPixelHero/sounds/572938/
+- Repeat guess: https://freesound.org/people/plasterbrain/sounds/423169/
+- Win game: https://freesound.org/people/FoolBoyMedia/sounds/352669/
+- Lose game: https://freesound.org/people/themusicalnomad/sounds/253886/
