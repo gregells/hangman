@@ -14,6 +14,7 @@ for (let i = 0; i < ALL_WORDS.commonWords.length; i++) {
 const SOUNDS = {
   correct: 'https://cdn.freesound.org/previews/679/679016_14249477-lq.mp3',
   incorrect: 'https://cdn.freesound.org/previews/572/572938_10182789-lq.mp3',
+  repeat: 'https://cdn.freesound.org/previews/423/423169_4284968-lq.mp3',
   win: 'https://cdn.freesound.org/previews/352/352669_4019029-lq.mp3',
 };
 
@@ -99,7 +100,10 @@ function handleKeypress(event) {
 
 function checkLetter(letter) {
   // If the letter has already been guessed, exit the function:
-  if (state.guessedLetters.includes(letter)) return;
+  if (state.guessedLetters.includes(letter)) {
+    playSound('repeat');
+    return;
+  }
 
   // Add the clicked letter to the list of guessed letters:
   state.guessedLetters.push(letter);
