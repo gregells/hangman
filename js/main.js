@@ -16,6 +16,7 @@ const SOUNDS = {
   incorrect: 'https://cdn.freesound.org/previews/572/572938_10182789-lq.mp3',
   repeat: 'https://cdn.freesound.org/previews/423/423169_4284968-lq.mp3',
   win: 'https://cdn.freesound.org/previews/352/352669_4019029-lq.mp3',
+  lose: 'https://cdn.freesound.org/previews/253/253886_3169537-lq.mp3',
 };
 
 /*------------------------- state variables -------------------------*/
@@ -248,7 +249,7 @@ function animateRevealLetter(letterEl) {
 }
 
 function animateWinGame(wordEl) {
-  // Play the win sound:
+  // Play the 'win' sound:
   playSound('win');
   // Pop-up the letters one-by-one in sequence:
   for (let i = 0; i < wordEl.children.length; i++) {
@@ -271,6 +272,8 @@ function animateWinGame(wordEl) {
 }
 
 function animateLoseGame(wordEl) {
+  // Play the 'lose' sound:
+  playSound('lose');
   for (let i = 0; i < wordEl.children.length; i++) {
     // Apply animation only to letters that haven't been found:
     if (state.currentWord[i] !== state.randomWordArray[i]) {
