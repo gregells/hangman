@@ -22,7 +22,6 @@ The game adopts the Model-View-Controller (MVC) design pattern for the code's ar
 * Start a new game by clicking the play again button, or pressing Shift + Enter on the physical keyboard.
 
 ## Future Development Plans:
-* Add sounds for incorrect guess, correct guess, win & game over.
 * Keep track of wins/losses on consecutive games, count streak of consecutive wins.
 * Add a points tracker.
 * Add a daily mode.
